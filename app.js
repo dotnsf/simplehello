@@ -4,12 +4,11 @@ var express = require( 'express' ),
 
 app.get( '/', function( req, res ){
   res.contentType( 'text/plain; charset=utf-8' );
-  var hello = "Hello";
-  var name = "World";
-  if( req.query.name ){
-    name = req.query.name;
+  var hello = "Hello World.";
+  if( req.query.hello ){
+    hello = req.query.hello;
   }
-  res.write( hello + ' ' + name );
+  res.write( hello );
   res.end();
 });
 
